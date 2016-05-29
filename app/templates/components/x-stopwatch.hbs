@@ -1,0 +1,21 @@
+{{#if isResetState}}
+{{timeElapsed}}
+<button {{action 'start'}} class='start'>Start</button>
+{{/if}}
+
+{{#if isRunState}}
+{{timeElapsed}}
+<button {{action 'hold'}}>Hold</button>
+<button {{action 'stop'}}>Stop</button>
+{{/if}}
+
+{{#if isPauseState}}
+{{timeElapsed}}
+<button {{action 'start'}}>Start</button>
+<button {{action 'reset'}}>Reset</button>
+{{/if}}
+
+{{#if isLapState}}
+{{lapTime}}
+<button {{action 'continue'}}>Continue</button>
+{{/if}}
